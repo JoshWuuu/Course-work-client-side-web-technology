@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset = "UTF-8">
+<title>Stanford Performing Arts</title>
+<link type="text/css" rel="stylesheet" href="reset.css" />
+<style>
+    
+    
+	body {
+        margin-left: 10%;
+        margin-right: 10%;
+	  	display: grid;
+	  	grid-gap: 15px;
+	}
+	#firstRow {
+        display: flex;
+        flex-direction: row;
+	  	grid-column: 1 / span 2;
+	  	grid-row-start: 1;
+    }
+    #bottomLeft {
+        display: flex;
+        flex-direction: row;
+	  	grid-column-start: 1;
+        grid-row-start: 2;
+        width: auto;
+    }
+    #bottomRight {
+        display: flex;
+        flex-direction: column;
+	  	grid-column-start: 2;
+        grid-row-start: 2;
+        width: auto;
+    }
+	h1 {
+	  	color: #cc0000;
+	  	font-size: 36pt;
+	  	font-weight: bold;
+	  	font-family: sans-serif;
+        margin: 5px;
+	}
+	h2 {
+	  	font-size: 18pt;
+	  	font-weight: bold;
+	  	font-family: sans-serif;
+	  	margin: 5px;
+    }
+    
+	h3 {
+	  	font-size: 14pt;
+	  	font-weight: bold;
+	  	font-family: sans-serif;
+        margin: 15px;
+          
+    }
+    
+	#edition {
+	  	color: #cc0000;
+	  	font-size: 12pt;
+	  	font-weight: bold;
+	  	font-family: sans-serif;
+        margin: 3px;
+        width: 14ex;  
+    }
+    
+    #header {
+        width: 95%;  
+    }
+
+	.calendarItem {
+        font-size: 12pt;
+	  	font-style: italic;
+	  	font-family: sans-serif;
+	  	border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        padding: 3px;
+	}
+	img {
+	  	float: left;
+        padding: 5px;
+        width: 400px;
+    }
+    @media (max-width: 815px) {
+        #firstRow {
+            display: flex;
+            flex-direction: column;
+	  	    grid-column: 1 / span 1;
+	  	    grid-row-start: 1;
+        }
+        #bottomRight {
+            grid-column: 1 / span 1;
+            grid-row-start: 3;
+        }
+        h1 {
+            font-size: 32pt;
+        }
+        #edition {
+            width: auto;  
+        }
+    }
+    @media (max-width: 650px) {
+        body {
+	  	    display: grid;
+	  	    grid-gap: 15px;
+	    }
+        #firstRow {
+            display: flex;
+            flex-direction: column;
+	  	    grid-column: 1 / span 1;
+	  	    grid-row-start: 1;
+        }
+        #bottomLeft {
+            display: flex;
+            flex-direction: column;
+        }
+        #bottomRight {
+            grid-column: 1 / span 1;
+            grid-row-start: 3;
+        }
+        h1 {
+            font-size: 32pt;
+        }
+        #edition {
+            width: auto;  
+        }
+        img {
+	  	    width: calc(100% - 10px);
+        }
+    }
+	</style>
+	</head>
+<body>
+<div id = "firstRow">
+    <div id="header"><h1>Stanford Performing Arts</h1></div>
+    <div id="edition"><p>Autumn 2012 Edition</p></div>
+</div>
+
+<div id = "bottomLeft">
+    <div id = "pic">
+        <h2>Bing Concert Hall</h2>
+        <img src = "bing.jpg" alt ="bing">
+    </div>
+    <div id="text">
+       <p>The Bing Concert Hall at Stanford will play a vital role on campus and in the local community. The hall's exceptional acoustics and state-of-the-art technical capabilities will showcase the world's finest performers.</p>
+        <br/><p>The hall is scheduled to open early in 2013. The concert hall will have 844 seats in an intimate vineyard-style configuration, with terraced sections wrapping all the way around the stage.</p>
+    </div>
+</div>       
+
+<div id = "bottomRight">
+    <div><h3>Calendar</h3></div>
+    <div class="calendarItem"><p>Harmony for Humanity: Daniel Pearl World Music Concert</p></div>
+    <div class="calendarItem"><p>Sundays with the St. Lawrence String Quartet</p></div>
+    <div class="calendarItem"><p>Merce Cunningham Dance Company</p></div>
+    <div class="calendarItem"><p>Juilliard String Quartet</p></div>       
+</div>  
+</body>
+</html>

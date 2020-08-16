@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Cairn Terriers</title>
+<style>
+body {
+	display: grid;
+	grid-template-columns: 300px 700px 300px;
+    grid-template-rows: 130px 200px 200px;
+    grid-gap: 30px;
+}
+#banner {
+    display: flex;
+    flex-direction: row;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+#aboutMe {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    grid-row: 2 / span 2;
+}
+#status {
+    grid-column: 2;
+    grid-row: 2 / span 2;
+}
+#post {
+    display: flex;
+    flex-direction: column;
+    grid-column: 3;
+    grid-row: 1 / span 2;
+}
+#stanford {
+    background-color: #9A0000;
+    color: white;
+    width: 85%;
+    border: 3px #9A0000;
+    font-size: 40px;
+    text-align: center;
+}
+#logo {
+    width: 150%;
+    height: 100%;
+}
+
+#selfie {
+    height: 70%;
+    width: 100%;
+}
+h1 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.title {
+    background-color: #CC9191;
+    border-top: 2px black solid;
+    border-bottom: 2px black solid;
+    font-weight: bold;    
+    height: 40px;
+    
+}
+
+.indent {
+    margin-left: 10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.context {
+    font-weight: bold;
+}
+
+.statusBlock {
+    border-top: 1px black solid;
+    border-bottom: 1px black solid;
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    height: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+</style>
+</head>
+<body>
+<div id="banner">
+    <div id="stanford">
+        <h1>Stanford Connection</h1>
+    </div>
+    <div><img src="tree-logo.gif" id="logo" alt="logo"></div>
+</div>
+
+<div id="aboutMe">
+    <div><img src="Selfie.jpg" id="selfie" alt="selfie"></div>
+    <div class="title"><p class="indent">About Me</p></div>
+    <div><p><span class="context">Birthday</span>: August 18, 1996</p>
+        <p><span class="context">Gender</span>: Male</p></div>
+    <div class="title"><p class="indent">Friends</p></div>
+    <div><p><span class="context">Winnie</span></p>
+        <p><span class="context">Apple</span></p></div>
+</div>
+
+<div id="status">
+    <div class="title"><p class="indent">Status Updates</p></div>
+    <div class="statusBlock"><p>\\</p></div>
+    <div class="statusBlock"><p>lol</p></div>
+    <div class="statusBlock"><p>lololol</p></div>
+    <div class="statusBlock"><p>Let's go Lakers!!!!</p></div>
+</div>
+
+<div id="post">
+        <div class="title"><p class="indent">Post Updates</p></div>
+        <textarea></textarea>
+		<input type = "submit" value = "Submit New Update">
+    </div>
+</body>
+</html>

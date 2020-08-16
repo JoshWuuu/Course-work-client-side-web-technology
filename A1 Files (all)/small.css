@@ -1,0 +1,14 @@
+#firstRow {
+    display: flex;
+    flex-direction: column;
+    grid-column-start: auto;
+    grid-row-start: 1;
+}
+
+#edition {
+    color: #cc0000;
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 5px;
+}

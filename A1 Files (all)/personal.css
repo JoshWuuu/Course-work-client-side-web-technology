@@ -1,0 +1,24 @@
+.photo {
+    border: 1px gray;
+    padding: 10px;
+    margin: 5px;
+    float: left;
+}
+
+#context {
+    font-style: italic;
+    font-size: 18px;
+}
+
+#titlebar {
+    text-align: center;
+}
+
+a:hover {
+    color: green;
+}
+
+.stanford {
+    color: red;
+    font-weight: bold;
+}

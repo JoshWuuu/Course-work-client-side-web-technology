@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bay Area Colleges and Universities</title>
+  <link rel="stylesheet" type="text/css" href="colleges.css">
+  <script src="colleges.js" defer></script>
+</head>
+<body>
+  <h1>Bay Are Colleges and Universities</h1>
+  <div id="outerDiv">
+    <div id = 'div1'>
+    <table id='outputTable'>
+    <thead>
+      <tr>
+        <th>Name</th><th>SAT High</th><th>SAT Low</th><th>Tution</th>
+      </tr>
+    </thead>
+      <tbody id="output"></tbody>
+    </table>
+    </div>
+    <div id="div2">
+      <table id="input">
+        <thead>
+          <tr>
+            <th>Search Criteria</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input class="radio" type="radio" name="schoolType" value="public">Public
+              <input class="radio" type="radio" name="schoolType" value="private">Private
+              <input class="radio" type="radio" name="schoolType" value="">Don't care
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span>Maximum Tution</span><br>
+              <span id="note">leave blank for don't care</span>
+              <input id="tuition" type="text" name="tuition">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span>Maximum High SAT</span><br>
+              <span id="note">leave blank for don't care</span>
+              <input id="highSAT" type="text" name="highSAT">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span>Maximum Low SAT</span><br>
+              <span id="note">leave blank for don't care</span>
+              <input id="lowSAT" type="text" name="lowSAT">
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <input id="updateButton" type="submit" value="Update">
+    </div>
+  </div>
+</body>
+</html>

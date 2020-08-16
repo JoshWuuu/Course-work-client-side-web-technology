@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Configure Your GT Super Sportscar</title>
+
+<style>
+body {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: auto;
+    grid-gap: 3px;
+}
+#header {
+    grid-column: 1/span 2;
+    grid-row: 1;
+}
+#firstCol {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1;
+    grid-row: auto;
+    width: 450px;
+    
+}
+#secondCol {
+    display: flex;
+    flex-direction: row;
+    grid-column: 2;
+    grid-row: 2;
+    height: 150px;
+    width: 450px;
+    align-items: unset;
+}
+
+fieldset {
+	margin-bottom: 15px;
+}
+
+div {
+	margin-bottom: 10px;
+}
+
+td {
+    padding: 0px;
+    margin: 0px;
+}
+
+ul {
+    margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 15px;
+    font-size: 13px;
+}
+
+</style>
+
+</head>
+<body>
+<div id="header"><h1>Configure Your GT Super Sportscar</h1></div>
+  <div id="firstCol">
+<form id="carForm" onsubmit="return false">
+  <fieldset>
+    <legend>Configuration</legend>
+    <table>
+      <tr><td><input name="Configuration" id="Manual" type="radio" value="manual" /></td>
+          <td><label for="Manual">GT Manual</label> </td>
+          <td><label for="Manual" id="price">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+            &nbsp &nbsp &nbsp &nbsp &nbsp $17,790.00</label> </td></tr>
+      <tr><td><input name="Configuration" id="Automatic" type="radio" value="automatic" /></td>
+          <td><label for="Automatic">GT Automatic</label> </td>
+          <td><label for="Automatic">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+            &nbsp &nbsp &nbsp &nbsp &nbsp $18,590.00</label> </td></tr>
+      <tr><td><input name="Configuration" id="S Manual" type="radio" value="sManual" /></td>
+          <td><label for="S Manual">GT-S Manual</label> </td>
+          <td><label for="S Manual">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+            &nbsp &nbsp &nbsp &nbsp &nbsp $22,455.00</label> </td></tr>
+      <tr><td><input name="Configuration" id="S Sportshift" type="radio" value="sSportshift" /></td>
+          <td><label for="S Sportshift">GT-S Sportshift</label> </td>
+          <td><label for="S Sportshift">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+            &nbsp &nbsp &nbsp &nbsp &nbsp $23,155.00</label> </td></tr>
+    </table>
+  </fieldset>
+
+  <fieldset>
+    <legend>Factory Options</legend>
+	<table>
+        <tr><td><input name="factoryOptions" id="Combo1" type="radio" value="comboOne" /></td>
+            <td><label for="Combo1">Option Combo#1</label> </td>
+            <td><label for="Combo1">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+               $1,235.00</label> </td></tr>
+        <tr><td></td><td><ul><li>Power Windows, Doors, Cruise Control</ul></td></tr>
+        <tr><td><input name="factoryOptions" id="Combo2" type="radio" value="comboTwo" /></td>
+            <td><label for="Combo2">Option Combo#2</label> </td>
+            <td><label for="Combo2">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+               $3,354.00</label> </td></tr>
+        <tr><td></td><td><ul>
+            <li>Rear Spoiler and Fog Lamps
+            <li>Keyless Entry
+            <li>Power Tilt & Slide Moonroof
+            <li>Power Windows, Doors, Cruise Control
+        </ul></td></tr>
+        <tr><td><input name="factoryOptions" id="No Combo" type="radio" value="noCombo" /></td>
+            <td><label for="No Combo">No Combo</label> </td>
+            <td><label for="No Combo">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+               $0</label> </td></tr>
+      </table>
+  </fieldset>
+  
+	<fieldset>
+	  <legend>Dealer Options</legend>
+	  <table>
+        <tr><td><input name="Dealer Options" id="Stereo" type="checkbox" value="none" /></td>
+            <td><label for="Stereo">Upgraded Stereo System</label> </td>
+            <td><label for="Stereo" id="price">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+              &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp $550.00</label> </td></tr>
+        <tr><td><input name="Dealer Options" id="Security" type="checkbox" value="none" /></td>
+            <td><label for="Security">VIP Security System</label> </td>
+            <td><label for="Security">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+              &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp $3990.00</label> </td></tr>
+        <tr><td><input name="Dealer Options" id="Mirror" type="checkbox" value="none" /></td>
+            <td><label for="Mirror">Auto-Dimming Mirror</label> </td>
+            <td><label for="Mirror">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+              &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp $295.00</label> </td></tr>
+      </table>
+	</fieldset>
+	<fieldset>
+	  <legend>Total Price</legend>
+	  <input type="text" size="5" name="total" id="total">
+      <input type="button" value="Calulate Total" id="totalButton" />
+    </fieldset>
+  </div>
+</form>
+<form id="carForm2">
+  <div id="secondCol">
+    <fieldset>
+        <legend>Choose A Color</legend>
+        <select name="colorChoices" id="colorChoices">
+            <option id="red" value="red.jpg">Red</option>
+            <option id="blue" value="blue.jpg">Blue</option>
+            <option id="silver" value="silver.jpg">Silver</option>
+            <option id="white" value="white.jpg">White</option>
+            <option id="black" value="black.jpg">Black</option>
+        </select>
+        <img src="red.jpg", alt="car pic" id="photo">
+      </fieldset>
+  </div>
+</form>
+  <script type="text/javascript" src="car_calculations.js"></script>
+</body>
+</html>

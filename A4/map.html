@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Stanford Map</title>
+<style>
+body {
+    display: grid;
+    grid-column: auto auto
+}
+#mapframe {
+    grid-column: 1;
+}
+#controlSec {
+    grid-column: 2;
+}
+#mapframe {
+    overflow: hidden;
+    border: 15px solid black;
+}
+</style>
+ <script src="map.js" defer></script>
+</head>
+<body>
+<div id="mapframe">
+<img  id='map' src='map-s.gif' alt='photo' />
+</div>
+<div id='controlSec'>
+    <button id="zoomIn" type="button">+</button>
+    <button id="zoomOut" type="button">-</button>
+    <br>
+    <br>
+    <button id="north" type="button">▲</button>
+    <br>
+    <button id="west" type="button">◀</button>
+    <br>
+    <button id="east" type="button">▶</button>
+    <br>
+    <button id="south" type="button">▼</button>
+</div>
+</body>
+</html>

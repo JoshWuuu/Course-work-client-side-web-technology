@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Ajax weather</title>
+</head>
+
+<body>
+    <h1>Open Weather via AJAX</h1>
+    <label>Enter ZIP code:</label>
+    <input type="text" id="zip">
+    <input type="button" value="Get Weather" id="getW">
+    <input type="button" value="Clear" id="clearW"><br>
+    <textarea id="output"
+        style="position: absolute ;top: 100px; margin-top: 20px; height: 200px; width: 400px;"></textarea>
+
+    <script>
+
+        function getWeather() {
+            var input = document.getElementById('zip').value;
+            var web = 'https://api.openweathermap.org/data/2.5/weather?zip=' + input + ',us&units=imperial&APPID=c3c990d9adf6a4dfd42fc0e3b7abeaa4';
+            fetch(web)
+                .then((response) => response.json())
+                .then((jsonResult) => processWeather(jsonResult))
+                .catch((err) => notifyOfError(err))
+        }
+
+        document.getElementById('getW').addEventListener('click', getWeather, false);
+
+        function processWeather(jsonResult) {
+            console.log(jsonResult);
+            console.log(jsonResult.name)
+            console.log(jsonResult['name'])
+            var newHTML = jsonResult.name + ':' + jsonResult.main.temp;
+            document.getElementById("output").innerHTML += newHTML + '&#13;&#10;';
+        }
+
+        function notifyOfError(err) {
+            var errMsg = "Can't find it";
+            document.getElementById("output").innerHTML += errMsg + '&#13;&#10;';
+        }
+
+    </script>
+</body>
+
+</html>
